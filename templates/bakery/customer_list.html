@@ -1,0 +1,17 @@
+<!-- bakery/templates/bakery/customer_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer List</title>
+</head>
+<body>
+    <h1>Customers</h1>
+    <a href="{% url 'add_customer' %}">Add Customer</a>
+    <ul>
+        {% for customer in customers %}
+            <li>{{ customer.name }} - {{ customer.email }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

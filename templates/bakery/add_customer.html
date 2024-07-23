@@ -1,0 +1,17 @@
+<!-- bakery/templates/bakery/add_customer.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Customer</title>
+</head>
+<body>
+    <h1>Add Customer</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'customer_list' %}">Back to Customer List</a>
+</body>
+</html>

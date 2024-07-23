@@ -1,0 +1,16 @@
+<!-- bakery/templates/bakery/home.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Bakery Management System</h1>
+    <ul>
+        <li><a href="{% url 'product_list' %}">View Products</a></li>
+        <li><a href="{% url 'customer_list' %}">View Customers</a></li>
+        <li><a href="{% url 'order_list' %}">View Orders</a></li>
+    </ul>
+</body>
+</html>

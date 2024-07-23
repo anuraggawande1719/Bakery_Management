@@ -1,0 +1,17 @@
+<!-- bakery/templates/bakery/order_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order List</title>
+</head>
+<body>
+    <h1>Orders</h1>
+    <a href="{% url 'add_order' %}">Add Order</a>
+    <ul>
+        {% for order in orders %}
+            <li>Order {{ order.id }} by {{ order.customer.name }} - ${{ order.total_price }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

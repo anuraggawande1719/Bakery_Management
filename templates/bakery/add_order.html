@@ -1,0 +1,17 @@
+<!-- bakery/templates/bakery/add_order.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Order</title>
+</head>
+<body>
+    <h1>Add Order</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'order_list' %}">Back to Order List</a>
+</body>
+</html>
